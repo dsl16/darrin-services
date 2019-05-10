@@ -5,7 +5,7 @@ Tracks manga by scraping TenManga with a Lambda triggered by CloudWatch. Several
 MangaTracker utilizes the following Lambda functions.
 
 ### Scraper
-This Lambda scrapes TenManga. It is triggered by a recurring, timed CloudWatch event.
+This Lambda scrapes TenManga, and saves the scraped data to my "raw" S3 bucket. It is triggered by a recurring, timed CloudWatch event.
 
 ### Process
 This Lambda performs file processing steps - at present, there are none. I may add compression at a later time, but for now, no processing is needed, so all this step does is copy the file from the "raw" bucket to the "processed" bucket.
