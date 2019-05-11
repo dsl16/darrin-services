@@ -14,4 +14,7 @@ This Lambda performs file processing steps - at present, there are none. I may a
 This Lambda performs the data transformations required to turn the processed file (which is still HTML) into a dictionary object.
 
 ### Insert
-This Lambda checks for new data in the scraped data that isn't contained in my DynamoDB table. If new data is found, it inserts those rows.  
+This Lambda checks for new data in the scraped data that isn't contained in my DynamoDB table. If new data is found, it inserts those rows.
+
+### Send Alert
+This Lambda identifies when a row has been added to the DynamoDB table via DynamoDB Streams, and sends an alert.
