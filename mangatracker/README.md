@@ -16,5 +16,5 @@ This Lambda performs the data transformations required to turn the processed fil
 ### Insert
 This Lambda checks for new data in the scraped data that isn't contained in my DynamoDB table. If new data is found, it inserts those rows.
 
-### Send Alert
-This Lambda identifies when a row has been added to the DynamoDB table via DynamoDB Streams, and sends an alert.
+### Alert
+This Lambda checks DynamoDB Streams for any changes to the DynamoDB table, then alerts an SNS channel if there have been changes.
